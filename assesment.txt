@@ -1,0 +1,38 @@
+ ----------------------------------------------------------------- 
+   ___________ ________   __   _______    ___   ___ _   ______________  _____  __
+  / __/ ___/ // /  _/ /  / /  / __/ _ \  / _ | / _ \ | / /  _/ __/ __ \/ _ \ \/ /
+ _\ \/ /__/ _  // // /__/ /__/ _// , _/ / __ |/ // / |/ // /_\ \/ /_/ / , _/\  / 
+/___/\___/_//_/___/____/____/___/_/|_| /_/ |_/____/|___/___/___/\____/_/|_| /_/  
+                                                                   
+OBJECTIF, PRINCIPES D'EVALUATION ET DONNEES PERSONNELLES
+Cet exercice a pour but d'évaluer :
+- Vcité à otre capautiliser des données structurées
+- Votre capacité à produire un code correct, élégant, et idéalement, utilement documenté
+- Votre capacité à partager des données
+- Le cas échéant, votre capacité à rechercher utilement de l'information sur Internet en cas de non maitrise d'un concept technique
+Cet exercice fait l'objet d'une notation qualitative par nos services de recrutement. Cette notation ne vous sera pas communiquée.
+RESSOURCES
+Une URL (https://schiller-advisory.com/asses.json) a été mise à votre disposition.
+Elle simule l'API d’un CRM et renvoie, pour une période déterminée, un jeu de données comprenant, pour chaque commande :
+- Le numéro de la commande
+- L’identifiant, le prénom et le nom du vendeur
+- L’identifiant du client  
+- La valeur de la commande
+- Le timestamp UNIX de la vente
+- Le nom du vendeur
+Exemple : {'ref_client': 'PSHJS', 'numero_commande': 47360, 'ts_inscription': 1654702251.0, 'tarif': 490, 'vendeur': {'id': 5, 'nom': ['TARREL', 'Manon']}}
+Vous pouvez rechercher de l'information sur Internet, sans toutefois communiquer avec des tiers.
+CONSIGNES
+1/ Utilisez les données disponibles pour répondre aux questions suivantes
+- Combien de ventes sont retournées par l’API ?   
+- A quelle date a eu lieu la plus ancienne de ces ventes ?
+- Quel est le chiffre d’affaires total généré sur la période ?
+- Quel est le chiffre d’affaires moyen par vente ?
+- Quel est le nom du vendeur ayant réalisé le chiffre d’affaires le plus élevé sur la période ?
+- Quel est le taux de fidélisation de chaque vendeur, c’est à dire le pourcentage de ses clients qui ont commandé au moins deux formations ?
+    (Par exemple, un vendeur ayant vendu à 10 clients différents, dont 8 n'ayant acheté qu'une seule formation, 1 ayant acheté 2 formations et 1 ayant acheté 5 formations a un taux de fidélisation de 20%)
+------
+2/ Rédigez un programme qui, pour une référence client donnée affiche à l'utilisateur les informations suivantes :
+“Vous êtes client chez Schiller Advisory depuis le <date>. Votre chargé de compte est <nom>. Vous avez commandé <nombre> formation<pluriel éventuel>.”
+Par exemple, [commande] PSHJS doit permettre d'afficher :
+Vous êtes client chez Schiller Advisory depuis le 8 Juin 2022. Votre chargé de compte est Manon TARREL. Vous avez commandé 2 formations.
